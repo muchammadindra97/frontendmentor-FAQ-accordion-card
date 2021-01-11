@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100vh;
+  padding: 150px 25px 0 25px;
+}
+
+.container {
+  position: relative;
+  background-color: white;
+  border-radius: 25px;
+  padding: 100px 30px 30px 30px;
+  text-align: center;
+  box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.25);
+}
+
+.illustration-1 {
+  position: absolute;
+  top: -110px;
+  left: 50%;
+  transform: translateX(-56%);
+}
+
+.illustration-2 {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.accordion {
+  border-bottom: solid 1px hsl(240, 5%, 91%);
+  padding: 15px 0;
+}
+
+.question {
+  padding: 0;
+  color: hsl(237, 12%, 33%);
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-align: left;
+  width: 100%;
+}
+
+.question:after {
+  content: url("../images/icon-arrow-down.svg");
+  float: right;
+}
+
+.question:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.question.active {
+  font-weight: 700;
+}
+
+.question.active:after {
+  transform: rotate(180deg);
+}
+
+.answer {
+  color: hsl(240, 6%, 50%);
+  text-align: left;
+  line-height: 1.5em;
+  margin-top: 15px;
+  display: none;
+}
+
+.answer.active {
+  display: block;
+}
+
+/* Attribution */
+
+.attribution {
+  color: white;
+  margin-top: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: pink;
+}
+
+@media (min-width: 992px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 100px;
+    width: 100%;
+    max-width: 600px;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: left -650px top calc(50% - 100px);
+  }
+
+  .illustration-1 {
+    content: url("../images/illustration-woman-online-desktop.svg");
+    top: 50%;
+    left: -75px;
+    height: 300px;
+    transform: translateY(-50%);
+  }
+
+  .illustration-2 {
+    content: url("../images/illustration-box-desktop.svg");
+    top: calc(50% + 20px);
+    left: -110px;
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    text-align: left;
+  }
+}
